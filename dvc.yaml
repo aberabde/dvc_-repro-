@@ -2,7 +2,7 @@ stages:
   mystage:
     cmd: python 01_prod_regression_ci__tutorial.py
     deps:
-    - data/Advertising.csv
+    - Advertising.csv
     - 01_prod_regression_ci__tutorial.py
     metrics:
     - metrics.json:
