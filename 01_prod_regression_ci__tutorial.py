@@ -24,7 +24,7 @@ from sklearn import metrics
 
 # lire le fichier de données
 #utiliser le param index_col: Column to use as the row labels of the DataFrame
-df = pd.read_csv('data\Advertising.csv', 
+df = pd.read_csv('data/Advertising.csv', 
                  index_col=0)
 df.head()
 
