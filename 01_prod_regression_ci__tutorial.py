@@ -168,9 +168,12 @@ print(r2)
 
 
 # Write scores to a file
-with open("metrics.txt", 'w') as outfile:
-        outfile.write("MSE:  {0:2.1f} \n".format(mse))
-        outfile.write("R2: {0:2.1f}\n".format(r2))
+#with open("metrics.txt", 'w') as outfile:
+ #       outfile.write("MSE:  {0:2.1f} \n".format(mse))
+ #       outfile.write("R2: {0:2.1f}\n".format(r2))
+
+ with open("metrics.json", 'w') as outfile:
+        json.dump({ "MSE": mse, "R2":r2}, outfile)
 
 
 # In[73]:
