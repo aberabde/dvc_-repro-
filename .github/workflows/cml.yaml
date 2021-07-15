@@ -15,7 +15,7 @@ jobs:
           python 01_prod_regression_ci__tutorial.py
          
           # Pull data
-          dvc pull Advertising.csv
+          dvc pull data
           dvc repro
          
           # CML report
