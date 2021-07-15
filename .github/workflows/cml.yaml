@@ -12,12 +12,10 @@ jobs:
           GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
         run: |
           # Install requirements & Pull data
-          
-          pip install -r requirements.txt
           dvc pull Advertising.csv
-          python 01_prod_regression_ci__tutorial.py
-         
-              
+          pip install -r requirements.txt
+          dvc repro
+                      
           # CML report
           echo "## Metriques:" >> report.md
-          cat metrics.txt >> report.md
+          cat metrics.json >> report.md
