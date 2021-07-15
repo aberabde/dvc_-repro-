@@ -28,11 +28,8 @@ import json
 
 # lire le fichier de données
 #utiliser le param index_col: Column to use as the row labels of the DataFrame
-<<<<<<< HEAD
-df = pd.read_csv('Advertising.csv', 
-=======
+
 df = pd.read_csv('data/Advertising.csv', 
->>>>>>> 0e85cf2d0b30f154a3f0932dcfe034a8c6385b3e
                  index_col=0)
 df.head()
 
@@ -176,18 +173,13 @@ print(r2)
 
 
 # Write scores to a file
-<<<<<<< HEAD
-with open("metrics.txt", 'w') as outfile:
-        outfile.write("MSE:  {0:2.1f} \n".format(mse))
-        outfile.write("R2: {0:2.1f}\n".format(r2))
-=======
 #with open("metrics.txt", 'w') as outfile:
  #       outfile.write("MSE:  {0:2.1f} \n".format(mse))
  #       outfile.write("R2: {0:2.1f}\n".format(r2))
 
 with open("metrics.json", 'w') as outfile:
     json.dump({ "MSE": mse, "R2":r2}, outfile)
->>>>>>> 0e85cf2d0b30f154a3f0932dcfe034a8c6385b3e
+
 
 
 # In[73]:
