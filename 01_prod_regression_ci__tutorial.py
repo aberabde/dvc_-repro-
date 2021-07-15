@@ -16,10 +16,8 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn import model_selection
 from sklearn import metrics
-<<<<<<< HEAD
-=======
 import json
->>>>>>> 0e85cf2d0b30f154a3f0932dcfe034a8c6385b3e
+
  
 
 
