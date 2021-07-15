@@ -174,7 +174,7 @@ print(r2)
  #       outfile.write("R2: {0:2.1f}\n".format(r2))
 
 with open("metrics.json", 'w') as outfile:
-   json.dump({ "MSE": mse, "R2":r2}, outfile)
+    json.dump({ "MSE": mse, "R2":r2}, outfile)
 
 
 # In[73]:
