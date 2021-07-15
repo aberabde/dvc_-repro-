@@ -11,14 +11,13 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
         run: |
-          # Install requirements
+          # Install requirements & Pull data
+          
           pip install -r requirements.txt
+          dvc pull Advertising.csv
           python 01_prod_regression_ci__tutorial.py
          
-          # Pull data
-          dvc pull data
-          dvc repro
-         
+              
           # CML report
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
