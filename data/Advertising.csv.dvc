@@ -1,3 +1,8 @@
 outs:
+<<<<<<< HEAD
 - md5: 52a6ba2a833c8fdba195bba81b0d7a23
   path: Advertising.csv
+=======
+- md5: c7a9fe5cad97b0d6a600ef2f20f48ac4
+  path: Advertising.csv 
+>>>>>>> 1be2100092b44ea1fc6b5065bbdf4f7151a8bb82
