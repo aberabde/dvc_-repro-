@@ -1,9 +1,5 @@
 stages:
   mystage:
-    cmd: python 01_prod_regression_ci__tutorial.py
+    cmd: 01_prod_regression_ci__tutorial.py -0 metrics.json python3 01_prod_regression_ci__tutorial.py
     deps:
     - data/Advertising.csv
-    - 01_prod_regression_ci__tutorial.py
-    metrics: 
-    - metrics.json:
-        cache: false
