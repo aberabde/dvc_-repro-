@@ -3,19 +3,10 @@ on: [push]
 jobs:
   run:
     runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3.latest
     
     steps:
       - uses: actions/checkout@v2
-
-      - uses: iterative/setup-cml@v1
-
-      - uses: iterative/setup-dvc@v1
-
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
- 
-
       - name: cml
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,5 +23,6 @@ jobs:
           dvc repro
                       
           # Use DVC metrics diff to compare metrics to main
+          echo "##Metrics" >> report.md
           git fetch --prune --unshallow
-          dvc metrics diff --show-md main >> report.md
+          dvc metrics diff main --show-md >> report.md
