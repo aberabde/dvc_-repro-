@@ -4,7 +4,7 @@ stages:
     deps:
     - data/Advertising.csv
     - 01_prod_regression_ci__tutorial.py
-    metrics:
+    outs:
     - metrics.json:
         cache: false
 
