@@ -26,4 +26,6 @@ jobs:
           echo "##Metrics" >> report.md
           git fetch --prune --unshallow
           dvc metrics diff main --show-md >> report.md
+         
+          cat metrics.json >> report.md
           cml-send-comment report.md
