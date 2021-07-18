@@ -1,5 +1,0 @@
-mystage:
-  cmd: 01_prod_regression_ci__tutorial.py -m metrics.json python3 01_prod_regression_ci__tutorial.py
-  deps:
-  - path: data/Advertising.csv
-    md5: c7a9fe5cad97b0d6a600ef2f20f48ac4
